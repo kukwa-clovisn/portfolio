@@ -43,3 +43,12 @@ useHead({
     <NuxtPage />
   </main>
 </template>
+
+<style lang="scss">
+main {
+  width: 100vw;
+  height: fit-content;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+</style>

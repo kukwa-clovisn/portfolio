@@ -180,11 +180,11 @@
           }
 
           h2 {
-            font-size: 15px;
+            font-size: 17px;
           }
 
           p {
-            font-size: 9px;
+            font-size: 11px;
           }
         }
 

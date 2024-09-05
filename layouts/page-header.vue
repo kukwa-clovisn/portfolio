@@ -12,7 +12,7 @@ if (process.client) {
   <header :class="[{ active: stickyHeader }]">
     <div class="header-wrapper">
       <nav class="name">
-        <h1>
+        <h1 @click="($event) => navigateTo('/')">
           coding<span>herald<span class="animate-ping">.</span></span>
         </h1>
       </nav>
@@ -35,10 +35,11 @@ if (process.client) {
             >contact</nuxt-link
           >
         </ul>
-        <nuxt-link
-          to="/"
+        <a
+          href="https://wa.link/ql83fq"
+          target="_blank"
           class="hire-me relative inline-flex items-center justify-center px-5 py-1 text-sm font-bold text-gray-900 transition-all duration-200 bg-green-700 font-pj rounded-3xl focus:outline-none transition hover:bg-teal-400 focus:ring-offset-2 hover:duration-700 focus:ring-teal-200 capitalize animate-bounce"
-          >hire me</nuxt-link
+          >hire me</a
         >
         <button>
           <i class="fa-solid fa-bars"></i>
@@ -72,6 +73,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      cursor: pointer;
 
       span {
         color: rgb(0, 255, 157);

@@ -23,21 +23,28 @@
                 pianist, guitarist, tech enthusiast, online facilitator...
               </p>
               <div class="links">
-                <nuxt-link to="/" title="Get to me on whatsapp">
+                <a
+                  href="https://wa.link/ql83fq"
+                  target="_blank"
+                  title="Get to me on whatsapp"
+                >
                   <i class="fa-brands fa-whatsapp"></i
-                ></nuxt-link>
-                <nuxt-link to="/" title="visit my linkedin handle"
+                ></a>
+                <a href="/" target="_blank" title="visit my linkedin handle"
                   ><i class="fa-brands fa-linkedin"></i
-                ></nuxt-link>
-                <nuxt-link to="/" title="send me a mail"
+                ></a>
+                <a
+                  href="mailto:kcn.123.com@gmail.com"
+                  target="_blank"
+                  title="send me a mail"
                   ><i class="fa-solid fa-envelope"></i
-                ></nuxt-link>
-                <nuxt-link to="/" title="follow me on twitter">
+                ></a>
+                <a href="/" target="_blank" title="follow me on twitter">
                   <i class="fa-brands fa-twitter"></i
-                ></nuxt-link>
-                <nuxt-link to="/" title="follow me on facebook">
+                ></a>
+                <a href="/" target="_blank" title="follow me on facebook">
                   <i class="fa-brands fa-facebook"></i
-                ></nuxt-link>
+                ></a>
               </div>
               <div class="hero-links">
                 <button
@@ -324,8 +331,9 @@
               word-spacing: 5px;
             }
 
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: 550px) {
               width: 95%;
+              margin: auto;
 
               span {
                 text-align: center;
@@ -381,8 +389,12 @@
               opacity: 0.5;
             }
 
-            @media screen and (max-width: 490px) {
-              right: auto;
+            @media screen and (max-width: 550px) {
+              right: 10%;
+
+              @media screen and (max-width: 420px) {
+                right: auto;
+              }
             }
           }
         }

@@ -126,7 +126,7 @@
       font-size: 16px;
     }
     p {
-      font-size: 10px;
+      font-size: 12px;
     }
 
     .content .item {
@@ -139,7 +139,7 @@
       }
 
       div {
-        font-size: 7px;
+        font-size: 9px;
       }
 
       @media screen and (max-width: 560px) {
