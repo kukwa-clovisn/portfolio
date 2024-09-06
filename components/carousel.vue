@@ -2,6 +2,8 @@
 // importing images
 import imgOne from "~/assets/website-template.png";
 import imgtwo from "~/assets/website-template-2.png";
+import imgthree from "~/assets/biscam.png";
+import imgfour from "~/assets/biscam1.png";
 const dataArray = ref([
   {
     id: 1,
@@ -9,6 +11,7 @@ const dataArray = ref([
     description:
       " a simple portfolio website to customize and use for anyone with any qualifications.",
     imgurl: imgtwo,
+    link: "https://kukwaclovis.onrender.com",
   },
   {
     id: 2,
@@ -16,13 +19,22 @@ const dataArray = ref([
     description:
       "A website for someone with an academy or someone who offers online tutoring.",
     imgurl: imgOne,
+    link: "https://advancedtechacademy.onrender.com",
   },
   {
     id: 3,
     title: "Ecommerce website",
     description:
       "A website for any business man/woman who wants to take his/her business professionally",
-    imgurl: imgtwo,
+    imgurl: imgthree,
+    link: "https://biscam-sarl.onrender.com",
+  },
+  {
+    id: 4,
+    title: "Classic Company Website",
+    description: "A website for any company/institution/school etc ",
+    imgurl: imgfour,
+    link: "https://biscam-sarl.onrender.com",
   },
 ]);
 </script>
@@ -40,7 +52,7 @@ const dataArray = ref([
               <span class="line"></span>
               <div class="buttons">
                 <button class="button">purchase website</button>
-                <button class="button">place an order</button>
+                <a class="a" :href="data.link">visit website preview</a>
               </div>
             </div>
             <div class="image">
@@ -123,7 +135,8 @@ const dataArray = ref([
                 justify-content: flex-start;
                 gap: 20px;
                 flex-wrap: wrap;
-                button {
+                button,
+                a {
                   min-width: 170px;
                   height: 40px;
                   padding: 10px;

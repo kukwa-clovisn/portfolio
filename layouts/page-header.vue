@@ -6,6 +6,8 @@ if (process.client) {
     stickyHeader.value = true ? window.scrollY > 0 : false;
   });
 }
+
+const menuState = useMenuState();
 </script>
 
 <template>
@@ -41,7 +43,7 @@ if (process.client) {
           class="hire-me relative inline-flex items-center justify-center px-5 py-1 text-sm font-bold text-gray-900 transition-all duration-200 bg-green-700 font-pj rounded-3xl focus:outline-none transition hover:bg-teal-400 focus:ring-offset-2 hover:duration-700 focus:ring-teal-200 capitalize animate-bounce"
           >hire me</a
         >
-        <button>
+        <button @click="($event) => (menuState = true)">
           <i class="fa-solid fa-bars"></i>
         </button>
       </nav>
@@ -81,13 +83,13 @@ header {
     }
 
     .links {
-      width: 70%;
+      width: 75%;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       ul {
-        width: 70%;
+        width: 60%;
         height: 100%;
         display: flex;
         justify-content: space-evenly;
@@ -108,7 +110,7 @@ header {
           }
         }
 
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 550px) {
           display: none;
         }
       }
@@ -116,20 +118,20 @@ header {
         background: rgb(0, 255, 159);
       }
       button {
-        display: none;
+        // display: none;
         padding: 10px;
 
         i {
           font-size: 30px;
         }
 
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 550px) {
           display: flex;
           justify-content: center;
           align-items: center;
         }
       }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 550px) {
         justify-content: space-evenly;
       }
     }

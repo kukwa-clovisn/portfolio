@@ -1,3 +1,27 @@
+
+
+<script setup>
+const user = reactive({
+  name: "",
+  email: "",
+  number: "",
+  message: "",
+});
+
+async function handleFormSubmit() {
+  try {
+    const data = await $fetch("http://localhost:3000/api/send", {
+      method: "POST",
+      body: user,
+    });
+
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+</script>
+
 <template>
   <div class="contact-container" id="contact">
     <h1 data-aos="zoom-in"><span></span> get in touch <span></span></h1>
@@ -5,38 +29,38 @@
       Reach out to me lets do business together
     </p>
     <div class="contact-wrapper">
-      <form>
+      <form @submit.prevent="handleFormSubmit">
         <div class="form-wrapper">
           <h2>let's work together!</h2>
           <p>Leave me a message let's work together!</p>
           <div class="form-inputs">
-            <!-- <label for="username">Name:</label> -->
             <input
               type="text"
               name="username"
               id="username"
+              v-model="user.name"
               placeholder="Enter Name..."
             />
-            <!-- <label for="email">Email Address:</label> -->
             <input
               type="email"
               name="email"
               id="email"
+              v-model="user.email"
               required
               placeholder="enter Email address.."
             />
-            <!-- <label for="number">Phone/Whatsapp Number:</label> -->
             <input
               type="tel"
               name="number"
               id="number"
+              v-model="user.number"
               required
               placeholder="Enter Phone/Whatsapp number...."
             />
-            <!-- <label for="message">Message:</label> -->
             <textarea
               name="message"
               id="message"
+              v-model="user.message"
               cols="30"
               rows="2"
               required
@@ -120,7 +144,7 @@
   }
   .contact-wrapper {
     width: 80%;
-    margin: 9vh 0;
+    margin: 9vh auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

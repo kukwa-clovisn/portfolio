@@ -47,18 +47,20 @@
                 ></a>
               </div>
               <div class="hero-links">
-                <button
+                <a
+                  href="https://wa.link/ql83fq"
                   title="Let me handle your job for you."
                   class="button relative inline-flex items-center justify-center focus:outline-none focus:ring-0 capitalize"
                 >
                   hire me<i class="fa-solid fa-pen ml-2"></i>
-                </button>
-                <button
+                </a>
+                <a
+                  href="/#samples"
                   title="Let me handle your job for you."
                   class="button relative inline-flex items-center justify-center focus:outline-none focus:ring-0 capitalize"
                 >
                   see my work<i class="fa-solid fa-pen ml-2"></i>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -90,6 +92,7 @@
     <resume />
     <work />
     <contact />
+    <NuxtLayout name="menu"></NuxtLayout>
   </div>
 </template>
      
@@ -233,16 +236,16 @@
             margin: 20px auto;
 
             a {
-              width: 35px;
-              height: 35px;
+              width: 40px;
+              height: 40px;
               border-radius: 100%;
-              border: 2px solid green;
+              border: 2px solid rgb(2, 167, 104);
               display: flex;
               justify-content: center;
               align-items: center;
 
               i {
-                font-size: 12px;
+                font-size: 14px;
                 color: rgb(0, 255, 159);
               }
             }
@@ -257,7 +260,7 @@
             position: relative;
 
             .button {
-              font-size: 12px;
+              font-size: 13px;
               min-width: 150px;
               height: 40px;
               padding: 5px 15px;
