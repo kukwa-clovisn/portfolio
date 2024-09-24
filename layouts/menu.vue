@@ -25,16 +25,9 @@ const menuState = useMenuState();
           />
         </div>
         <p>have a project in mind?</p>
-        <button
-          class="appointment"
-          @click="
-            ($event) => {
-              navigateTo('/appointment'), (menuState = false);
-            }
-          "
-        >
+        <a href="https://wa.link/ql83fq" target="_blank" class="appointment">
           Hire me
-        </button>
+        </a>
       </div>
 
       <div class="services">
@@ -46,7 +39,7 @@ const menuState = useMenuState();
           <a href="/#blog" @click="($event) => (menuState = false)"
             >Blog <i class="fa-solid fa-arrow-right"></i
           ></a>
-          <a href="/appointment" @click="($event) => (menuState = false)"
+          <a href="/#samples" @click="($event) => (menuState = false)"
             >projects<i class="fa-solid fa-arrow-right"></i
           ></a>
           <a href="/#contacts" @click="($event) => (menuState = false)"
@@ -178,9 +171,12 @@ const menuState = useMenuState();
         height: 45px;
         font-weight: 500;
         text-transform: uppercase;
-        border-radius: 4px;
+        border-radius: 40px;
         overflow: hidden;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover {
           transform: scale(0.9);
@@ -225,7 +221,7 @@ const menuState = useMenuState();
           display: block;
           width: 100%;
           height: fit-content;
-          font-size: 12px;
+          font-size: 14px;
           text-decoration: none;
           text-transform: capitalize;
           text-align: left;

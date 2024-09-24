@@ -87,7 +87,6 @@
         </section>
       </div>
     </div>
-
     <services />
     <resume />
     <work />

@@ -1,3 +1,8 @@
+<script setup>
+const experience = ref(false);
+const skills = ref(false);
+const about = ref(false);
+</script>
 <template>
   <div class="resume-container" id="resume">
     <h1 data-aos="zoom-in"><span></span> blog <span></span></h1>
@@ -15,8 +20,8 @@
         </nav>
       </div>
       <div class="resume-content">
-        <!-- <skill /> -->
-        <experience />
+        <skill />
+        <!-- <experience /> -->
       </div>
     </div>
   </div>
@@ -60,7 +65,7 @@
   }
 
   .resume-wrapper {
-    width: 90%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
